@@ -28,14 +28,14 @@ const ProductImageView = styled(View)({
 });
 
 const index = () => {
+  // state for show addTocard button at bottom 
   const [show, setShow] = useState(true);
   const [dataSourceCords, setDataSourceCords] = useState([]);
   const [key, setKey] = useState(0);
   const ScrollRef = useRef();
-  useEffect(() => {
-    console.log('ghsvhjcsbjcbsjh', show);
-  }, [[show]]);
+  
   return (
+    // main view
     <View
       style={{
         height: '100%',
@@ -57,10 +57,15 @@ const index = () => {
             //     e.nativeEvent.layoutMeasurement.height <
             //     e.nativeEvent.contentOffset.y,
             // );
+            // track the view possion 
             if (
               dataSourceCords[4].addtocard -
                 e.nativeEvent.layoutMeasurement.height <
               e.nativeEvent.contentOffset.y
+              // dataSourceCords[4].addtocard ======> addTocardViewPossion 
+              // e.nativeEvent.layoutMeasurement.height ======> scroll view height
+              //  e.nativeEvent.contentOffset.y =====> current scroll view location
+              // if is true then show addtoCard at bottom is false and button will fix to screen  else button will fix at bottom
             ) {
               setShow(false);
             } else {
@@ -74,6 +79,7 @@ const index = () => {
           display: 'flex',
           height: '100%',
         }}>
+          {/* Product Images */}
         <View
           key={0}
           onLayout={event => {
@@ -202,6 +208,7 @@ const index = () => {
           <RefundPolicy />
         </View>
       </ScrollView>
+      
       {show ? (
         <View>
           <AddToCardButton
