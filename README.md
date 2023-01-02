@@ -29,3 +29,8 @@ The goal is to make Add to cart button so that it is always fixed to the bottom 
 In other words, if the user is at position 1-4, the add-to-cart button should be visible and fixed to the bottom of the screen (Even if the current scroll position shows 1-3 on the screen). However, if the user scrolls past the add-to-cart button position (position 5), the button scrolls up along with the rest of the product details and the user now sees the info about delivery dates, cancellation policy, etc.
 
 All the details (images/text) are to be filled up with lorem ipsum https://www.lipsum.com/ or random images, please do not spend any time on those details or their layout. The goal is just to make this fixed-and-floating add-to-cart button
+Step to Run Project
+
+Step 1 :- Run "yarn" command
+Step 2 :- Run "yarn start " command
+Step 3:- Run "yarn run android OR yarn run ios" (Note:- connect your mobile or else emu will start)s
